@@ -10,8 +10,8 @@ There are 5 folders, 1 for each problem.
 Each folder contains:
 - short computer-science-like problem statements (details are missed, read original statements for accurate description);
 - short description of idea to solve the problem;
-- *.cpp file (may be 2 files) with implemented solution;
-- smallest input data example (given in contest);
+- *.cpp file (may be several files) with implemented solution;
+- smallest input data example (given in contest, may be several files);
 
 Visual Studio 2019 (and respective compiler) was used during the contest, but any С++ compiler should be ok.
 OpenMP was used in some problems.

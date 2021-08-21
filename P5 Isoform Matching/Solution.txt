@@ -1,0 +1,6 @@
+Time complexity is O(n*q*C), where C indicates an average number of intervals in isoform.
+
+Algorithm simply "combines" each reference isoform with each request isoform (both easy and hard problems).
+For "combining" isoforms linear time, 2 iterators teqnique is used.
+
+For speedup reasons, OpenMP is used.
