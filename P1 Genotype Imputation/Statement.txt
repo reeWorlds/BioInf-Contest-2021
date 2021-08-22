@@ -1,0 +1,12 @@
+There are N + M humans.
+
+For N humans there are 2 binary strings of length L.
+Those strings represent 2 chromosomes.
+
+For M humans binary strings are hidden, but there is partially known other type of information.
+For each of M humans, there is a string of length L that consists of '0', '1', '2', '?'.
+'0', '1', '2' represent sum of corresponding hidden chromosomes bits; '?' means that the corresponding number is unknown.
+
+It is asked to predict all unknown sites, marked as '?'.
+
+N <= 240, M <= 480, L <= 10600, for M humans 10%-30% of genome is known.

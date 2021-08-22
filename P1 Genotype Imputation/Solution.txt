@@ -1,0 +1,25 @@
+First, given N genotype pairs (a1, b1), (a2, b2), ..., (aN, bN), create N^2 pairs (childs):
+(a1, b1), (a1, b2), ..., (a1, bN)
+(a2, b1), (a2, b2), ..., (a2, bN)
+...
+(aN, b1), (aN, b2), ..., (aN, bN)
+
+
+For each unknown position do next.
+Among all known positions find the best predictor.
+
+As there are 3 possible positions for both sites, correlation can be described as 3*3 matrix.
+Rows correspond to predictor, columns to predictable value.
+
+M | V0| V1| V2
+--------------
+P0|m00|m01|m02
+--------------
+P1|m10|m11|m12
+--------------
+P2|m20|m21|m22
+
+Predictor is build based on the max value of each row.
+
+Complexity: O(L*A * L*(1-A) * N^2), where A is % of unknown sites.
+Complexity explanation: (for each unknown position) * (brutforce each known position) * (collect statistic over all N^2 children)
