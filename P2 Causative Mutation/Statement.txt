@@ -1,0 +1,24 @@
+There are N long genomes.
+Each genome is split into blocks and only the middle character of each block is given.
+So, for each genome, you are given relatively short string which represents some sites of that genome.
+
+Also, there is information, if particular genome contains disease.
+The disease is caused by single site mutation.
+If g_i = Val then desease is present, and it isn't otherwise (g_i != Val).
+Note, that g_i may not belong to short string given to you.
+
+Genomes are generated in a next way.
+In the beginning, 10 genomes were generated at random.
+For 5 of them g_i = Val and for other 5 g_i != Val.
+Next, N - 10 genomes are generated based on 2 previous genomes.
+2 random previous genomes are split into 10-30 parts.
+Then, part 1 is taken from first genome, part 2 from second, part 3 from first, part 4 from second...
+
+There is also hard version, in which genome is diploid and you are given 2 short strigs for each genome.
+
+The task is to determine block (position in the short string) which contains mutation.
+
+You can output answer as "l r" which means that answer belongs to the [l; r] range.
+
+For each test, there are up to 10 test cases.
+1 <= N <= 1000, 1 <= L <= 1000, where L is lenght of short string.

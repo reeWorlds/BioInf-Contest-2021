@@ -1,0 +1,30 @@
+test case = 0
+{180 : 199}
+
+test case = 1
+{159 : 160}
+
+test case = 2
+
+
+test case = 3
+{0 : 17}
+
+test case = 4
+{44 : 46}
+
+test case = 5
+{173 : 174}
+
+test case = 6
+{60 : 60}
+
+test case = 7
+{0 : 8}
+
+test case = 8
+
+
+test case = 9
+{106 : 107}
+

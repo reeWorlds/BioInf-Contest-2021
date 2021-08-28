@@ -1,0 +1,35 @@
+Perfect solution probably is like a mutation tree.
+So you need to find first 10 genomes and parents for N - 10 genomes.
+Then somehow analyze that information.
+But it is not clear how to do so.
+
+
+So, there is another solution, that is based on the next fact:
+If mutated and normal genomes have long common substring then this substring probably does not contain disease mutation.
+It is because if it has mutation, then both genomes will be (probably) with mutation (contradiction to input).
+
+The solution is to compare each genome with mutation to each genome without mutation.
+Then find long common substrings.
+For each position, count how many long substrings it belongs.
+Finally, using some threshold find segments with low count value.
+
+
+Such a solution gives good hints if parameters are chosen appropriately, which is hard during the contest.
+To get full score you can use binary search on answer.
+
+
+It is recommended to compare output of program for parameters given below and answers given by the jury.
+It gives better understanding of the possibilities and flaws of the described approach.
+
+Here are some parameters, that (if analyzed manually and combined) give good output for all tests except test6.
+
+Haploid version:
+test1: (th = 10; val2 = 2)
+test2: look on output for (th = 25; val2 = 7) and (th = 20; val2 = 5)
+test3: look on output for (th = 100; val2 = 50) and (th = 75; val2 = 50) and (th = 50; val2 = 20)
+test4: look on output for (th = 100; val2 = 50) and (th = 75; val2 = 50) and (th = 50; val2 = 30)
+
+Diploid version:
+test5: (th = 2; val2 = 1)
+test6: look on output for (th = 6; val2 = 2) and (th = 7; val2 = 2)
+test7: look on output for (th = 20; val2 = 5) and (th = 30; val2 = 5)

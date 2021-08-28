@@ -1,0 +1,30 @@
+test case = 0
+{742 : 751}
+
+test case = 1
+{158 : 171}
+
+test case = 2
+{563 : 572}
+
+test case = 3
+{518 : 527}
+
+test case = 4
+{139 : 152}
+
+test case = 5
+{337 : 337}
+
+test case = 6
+{132 : 139}
+
+test case = 7
+{976 : 999}
+
+test case = 8
+{695 : 702}
+
+test case = 9
+{449 : 458}
+
