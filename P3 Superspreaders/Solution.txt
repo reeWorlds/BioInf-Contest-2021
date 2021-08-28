@@ -1,0 +1,13 @@
+First, the model given in the original statement is discrete (each person is either infected or not) and median is used.
+To make solution much faster, probabilistic model should be used.
+Let p_a and p_b are probabilities that persons A and B are infected.
+After communication edge (a, b, p) new probability is:
+p_b_new =  p_b + (1 - p_b) * p_a * p
+At the end of the simulation, we can estimate median as mean.
+It is not correct formally, but median and average are somehow correlated, particularly in this problem.
+
+Second, let consider all people that can infect someone else on day 1.
+Bruteforce them as superspreaders and take one with the biggest mean.
+In some cases, human with the biggest mean does not get max score.
+In this case, one with a 2, 3, 4... score should be considered.
+Implemented code outputs top10 superspreaders and their score.

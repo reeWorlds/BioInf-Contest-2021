@@ -1,0 +1,11 @@
+There is a graph describing communication during 7 days.
+Each edge in the graph is described by 3 values (a, b, p):
+p is probability of infection transition from person A to person B.
+
+Your task is to find person that infects the biggest number of people if he/she is the only infected human before day 1.
+More formally, there is a hidden seed for random in this problem.
+99 test simulations are executed and superspreader is person with max median of infected people among 99 executions.
+
+D = 7 - days
+1 <= N <= 1.5 * 10^5 - humans in model
+1 <= M <= 2.5 * 10^5 - edges in model
