@@ -1,0 +1,11 @@
+There are 2 genomes: major haplotype s0 and minor haplotype s1.
+For each test case, your task is to determine if only major haplotype is present in data or there are both genomes.
+For some tests, your task is to also determine minor haplotype s1.
+
+Now, more about the given data.
+First, you are given reference genotype s0 without any mistakes.
+You are also given N genomes of length S.
+Each given genome is constructed based on s0 or s1, but each site can be incorrect with probability alpha (sequencing error).
+In case there is only one reference haplotype present in the population, all genomes are based on s0.
+Otherwise, each genome is based on s1 with probability r and s0 with probability (1 - r).
+The difference between s0 and s1 is at least k sites.

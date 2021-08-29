@@ -1,0 +1,37 @@
+// Solution explained here differs from actual solution during contest //
+// Original idea brute force triplets of genomes, which is very slow //
+// >> means much bigger //
+
+
+First, test 1 - it can be solved manually. (100/100)
+
+
+Second, test 5 - can be easily solved if we analyze parameters. (299.9/300)
+There are 200 bases, 0.01 sequencing error rate, at least 16 variances between haplotypes.
+While 16 >> 2 = 200 * 0.01, difference between haplotypes is much higher then sequencing error.
+Thus, if difference between major haplotype and given haplotype is bigger than 15 bases, then minor haplotype is found.
+
+
+Third, tests 2, 3, 4, 6 - this tests have quite different parameters, but one common feature. (200/200 + 250/250 + 294.48/300 + 299.86/300)
+For all tests (sequencing error rate) / 3 << (minor haplotype representation rate).
+
+Let's fix some particular base, find non-reference value (A/C/G/T) that appears the most and analyze it.
+Let's calculate how many genomes (on average) have particular non-reference value of the corresponding site.
+There are 2 possibilities: sequencing error and minor genome.
+In the first case, (n * alpha) sites have sequencing errors and only (n * alpha / 3) have a particular value.
+In the second case, (n * r) sites belong to a minor haplotype (ignoring minor type sequencing error).
+
+In case particular position same for both genomes, there are about val1 = (n * alpha / 3) sites with the same value.
+Otherwise (minor genome have different value for some base), there are about val2 = (n * alpha / 3 + n * r) sites with same value.
+We need to distinguish between val1 and val2.
+Note that we estimated only average values, but those are random variables with some standard deviation.
+Instead of estimating standard deviation, we can just play with parameters (lines 45-58 in code).
+Also, note that there should be at least k bases that correspond to val2.
+
+
+Last, test 7 - use the previous solution, but choose parameters carefully. (381.41/400)
+You can also get full score, if use brute force on the answer, as there are 200 cases, each having only 2 possible answers.
+Note dramatic change of th1 value (line 57 in code).
+
+
+The complexity of solution: O(S * N).
