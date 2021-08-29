@@ -2,7 +2,7 @@
 
 This repository contains my solutions for Bioinformatics Contest 2021 Final Round.
 
-Link to contest: stepik.org/course/91751/info
+Link to contest: http://stepik.org/course/91751/info
 
 Link to the scoreboard: http://mon.stepik.org/2021/?_ga=2.113996608.653995406.1629575396-843884434.1623649917
 
